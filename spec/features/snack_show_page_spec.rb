@@ -20,8 +20,6 @@ RSpec.describe 'When I visit the snack show page' do
     it 'I also see a list of vending mahcines that carry the snack with information' do
       visit snack_path(@snack_1)
 
-      save_and_open_page
-
       expect(page).to have_content("Locations:")
       expect(page).to have_content("#{@machine_1.location}, Kinds of Snacks: 2, Average Price: $2.00")
       expect(page).to have_content("#{@machine_2.location}, Kinds of Snacks: 1, Average Price: $2.50")
